@@ -470,7 +470,7 @@ const Game = ({ debug, bgColor, webcam } = {}) => {
   );
 };
 
-export default ({ bgColor = 0x263238 / 2 }) => {
+export default ({ bgColor = "#FFF" }) => {
   const webcam = useRef();
   const [video, setVideo] = useState();
   useLayoutEffect(() => {
