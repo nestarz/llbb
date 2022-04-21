@@ -189,7 +189,7 @@ const usePlayer = ({ pos }) => {
     camera.position.add(ref.current.position);
   };
   const reset = () => void ref.current.position.set(...pos);
-  useCollidePlayer(ref, { segment, reset, wasd: false });
+  useCollidePlayer(ref, { segment, reset, wasd: true });
   useLayoutEffect(reset, []);
   useLayoutEffect(follow, [controls]);
   useFrame(follow);
@@ -404,9 +404,8 @@ const Game = ({ debug, bgColor, webcam } = {}) => {
 
   useFrame(() => {
     if (!controls) return;
-    controls.maxPolarAngle = Math.PI / 2;
     controls.minDistance = 1;
-    controls.maxDistance = 200;
+    controls.maxDistance = 2000;
   });
 
   const textures = useTexture(images.filter((v) => v.includes("shox.")));
