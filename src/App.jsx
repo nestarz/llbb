@@ -431,7 +431,7 @@ const Game = ({ debug, bgColor, webcam } = {}) => {
           texture={d < 1 && textures[d % textures.length]}
         />
       ))}
-      <fog attach="fog" args={["hsl(220, 100%, 5%)", 20, 70]} far={1000} />
+      <fog attach="fog" args={["#fff", 20, 70]} far={1000} />
       <color attach="background" args={[bgColor]} />
       <Fireworks />
       <Fireworks />
